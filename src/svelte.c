@@ -57,7 +57,7 @@ void svelte(char project_name[255])
         break;
       }
       case 3: {
-        const char rollup_config[] = "import svelte from 'rollup-plugin-svelte';\nimport commonjs from '@rollup/plugin-commonjs';\nimport resolve from '@rollup/plugin-node-resolve';\nimport livereload from 'rollup-plugin-livereload';\nimport { terser } from 'rollup-plugin-terser';\nimport css from 'rollup-plugin-css-only';\n\nconst production = !process.env.ROLLUP_WATCH;\n\nconst serve = () => {\n  let server;\n\n  const toExit = () => { if (server) server.kill(0); };\n\n  return {\n    writeBundle() {\n      if (server) return;\n      server = require('child_process').spawn('npm', ['run', 'start', '--', '--dev'], {\n        stdio: ['ignore', 'inherit', 'inherit'],\n        shell: true\n      });\n\n      process.on('SIGTERM', toExit);\n      process.on('exit', toExit);\n    }\n  };\n};\n\nexport default {\n  input: 'src/main.js',\n  output: {\n    sourcemap: true,\n    format: 'iife',\n    name: 'app',\n    file: 'public/build/bundle.js'\n  },\n  plugins: [\n    svelte({\n      compilerOptions: {\n        dev: !production\n      }\n    }),\n    css({ output: 'bundle.css' }),\n\n    resolve({\n      browser: true,\n      dedupe: ['svelte']\n    }),\n    commonjs(),\n    !production && serve(),\n    !production && livereload('public'),\n    production && terser()\n  ],\n  watch: {\n    clearScreen: false\n  }\n};";
+        const char rollup_config[1240] = "import svelte from 'rollup-plugin-svelte';\nimport commonjs from '@rollup/plugin-commonjs';\nimport resolve from '@rollup/plugin-node-resolve';\nimport livereload from 'rollup-plugin-livereload';\nimport { terser } from 'rollup-plugin-terser';\nimport css from 'rollup-plugin-css-only';\n\nconst production = !process.env.ROLLUP_WATCH;\n\nconst serve = () => {\n  let server;\n\n  const toExit = () => { if (server) server.kill(0); };\n\n  return {\n    writeBundle() {\n      if (server) return;\n      server = require('child_process').spawn('npm', ['run', 'start', '--', '--dev'], {\n        stdio: ['ignore', 'inherit', 'inherit'],\n        shell: true\n      });\n\n      process.on('SIGTERM', toExit);\n      process.on('exit', toExit);\n    }\n  };\n};\n\nexport default {\n  input: 'src/main.js',\n  output: {\n    sourcemap: true,\n    format: 'iife',\n    name: 'app',\n    file: 'public/build/bundle.js'\n  },\n  plugins: [\n    svelte({\n      compilerOptions: {\n        dev: !production\n      }\n    }),\n    css({ output: 'bundle.css' }),\n\n    resolve({\n      browser: true,\n      dedupe: ['svelte']\n    }),\n    commonjs(),\n    !production && serve(),\n    !production && livereload('public'),\n    production && terser()\n  ],\n  watch: {\n    clearScreen: false\n  }\n};";
         char rollup_config_path[255];
         sprintf(rollup_config_path, "%s/rollup.config.js", project_name);
 
@@ -67,7 +67,7 @@ void svelte(char project_name[255])
         break;
       }
       case 4: {
-        const char main_js[] = "import App from './App.svelte';\n\nconst app = new App({ target: document.body });\n\nexport default app;";
+        const char main_js[102] = "import App from './App.svelte';\n\nconst app = new App({ target: document.body });\n\nexport default app;";
         char main_js_path[255];
         sprintf(main_js_path, "%s/main.js", src_folder_path);
 
@@ -77,7 +77,7 @@ void svelte(char project_name[255])
         break;
       }
       case 5: {
-        const char app_svelte[] = "<script>\n  // JavaScript here\n</script>\n\n<style>\n  /* CSS here */\n</style>\n\n<main>\n  <h1>Hello World!</h1>\n</main>";
+        const char app_svelte[115] = "<script>\n  // JavaScript here\n</script>\n\n<style>\n  /* CSS here */\n</style>\n\n<main>\n  <h1>Hello World!</h1>\n</main>";
         char app_svelte_path[255];
         sprintf(app_svelte_path, "%s/App.svelte", src_folder_path);
 
@@ -87,7 +87,7 @@ void svelte(char project_name[255])
         break;
       }
       case 6: {
-        const char gitignore[] = "node_modules\n/public/build";
+        const char gitignore[27] = "node_modules\n/public/build";
         char gitignore_path[255];
         sprintf(gitignore_path, "%s/.gitignore", project_name);
 

@@ -66,7 +66,7 @@ void vue(char project_name[255])
         break;
       }
       case 4: {
-        const char main_js[] = "import { createApp } from 'vue';\nimport App from './App.vue';\n\nconst app = createApp(App);\napp.mount('#app');";
+        const char main_js[110] = "import { createApp } from 'vue';\nimport App from './App.vue';\n\nconst app = createApp(App);\napp.mount('#app');";
         char main_js_path[255];
         sprintf(main_js_path, "%s/main.js", src_folder_path);
 
@@ -76,7 +76,7 @@ void vue(char project_name[255])
         break;
       }
       case 5: {
-        const char app_vue[] = "<script>\n  // JavaScript here\n</script>\n\n<template>\n  <h1>Hello, World!</h1>\n</template>\n\n<style scoped>\n  /* CSS here */\n</style>";
+        const char app_vue[131] = "<script>\n  // JavaScript here\n</script>\n\n<template>\n  <h1>Hello, World!</h1>\n</template>\n\n<style scoped>\n  /* CSS here */\n</style>";
         char app_vue_path[255];
         sprintf(app_vue_path, "%s/App.vue", src_folder_path);
 
@@ -86,7 +86,7 @@ void vue(char project_name[255])
         break;
       }
       case 6: {
-        const char gitignore[] = "logs\n*.log\nnpm-debug.log*\nyarn-debug.log*\nyarn-error.log*\npnpm-debug.log*\nlerna-debug.log*\n\nnode_modules\n.DS_Store\ndist\ndist-ssr\ncoverage\n*.local\n\n/cypress/videos/\n/cypress/screenshots/\n\n.vscode/*\n!.vscode/extensions.json\n.idea\n*.suo\n*.ntvs*\n*.njsproj\n*.sln\n*.sw?";
+        const char gitignore[264] = "logs\n*.log\nnpm-debug.log*\nyarn-debug.log*\nyarn-error.log*\npnpm-debug.log*\nlerna-debug.log*\n\nnode_modules\n.DS_Store\ndist\ndist-ssr\ncoverage\n*.local\n\n/cypress/videos/\n/cypress/screenshots/\n\n.vscode/*\n!.vscode/extensions.json\n.idea\n*.suo\n*.ntvs*\n*.njsproj\n*.sln\n*.sw?";
         char gitignore_path[255];
         sprintf(gitignore_path, "%s/.gitignore", project_name);
 

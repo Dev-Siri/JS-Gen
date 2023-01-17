@@ -43,7 +43,7 @@ void react(char project_name[255])
         break;
       }
       case 2: {
-        const char robots_txt[] = "# https://www.robotstxt.org/robotstxt.html\nUser-agent: *\nDisallow:";
+        const char robots_txt[67] = "# https://www.robotstxt.org/robotstxt.html\nUser-agent: *\nDisallow:";
         char robots_txt_path[255];
         sprintf(robots_txt_path, "%s/robots.txt", public_folder_path);
 
@@ -53,7 +53,7 @@ void react(char project_name[255])
         break;
       }
       case 3: {
-        const char index_js[] = "import React from 'react';\nimport { createRoot } from 'react-dom/client';\n\nimport App from './App';\n\nconst root = createRoot(document.getElementById('root'));\nroot.render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>\n);";
+        const char index_js[230] = "import React from 'react';\nimport { createRoot } from 'react-dom/client';\n\nimport App from './App';\n\nconst root = createRoot(document.getElementById('root'));\nroot.render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>\n);";
         char index_js_path[255];
         sprintf(index_js_path, "%s/index.js", src_folder_path);
 
@@ -63,7 +63,7 @@ void react(char project_name[255])
         break;
       }
       case 4: {
-        const char app_jsx[] = "import React from 'react';\n\nconst App = () => {\n  return (\n    <div>\n      <h1>Hello, World!</h1>\n    </div>\n  );\n}\n\nexport default App;";
+        const char app_jsx[137] = "import React from 'react';\n\nconst App = () => {\n  return (\n    <div>\n      <h1>Hello, World!</h1>\n    </div>\n  );\n}\n\nexport default App;";
         char app_jsx_path[255];
         sprintf(app_jsx_path, "%s/App.jsx", src_folder_path);
 
@@ -73,7 +73,7 @@ void react(char project_name[255])
         break;
       }
       case 5: {
-        const char gitignore[] = "/node_modules\n/.pnp\n.pnp.js\n\n/coverage\n\n/build\n\n.DS_Store\n.env.local\n.env.development.local\n.env.test.local\n.env.production.local\n\nnpm-debug.log*\nyarn-debug.log*\nyarn-error.log*";
+        const char gitignore[178] = "/node_modules\n/.pnp\n.pnp.js\n\n/coverage\n\n/build\n\n.DS_Store\n.env.local\n.env.development.local\n.env.test.local\n.env.production.local\n\nnpm-debug.log*\nyarn-debug.log*\nyarn-error.log*";
         char gitignore_path[255];
         sprintf(gitignore_path, "%s/.gitignore", project_name);
 

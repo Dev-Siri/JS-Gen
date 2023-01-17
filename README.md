@@ -1,6 +1,6 @@
 # JS-Gen
 
-Short for JavaScript Generator, is a tool for generating a JavaScript project *fast*
+Short for JavaScript Generator, is a tool for generating JavaScript projects *fast*.
 
 ## Getting Started
 First, clone the repository:
@@ -29,9 +29,9 @@ Command line arguments:
 ./JS-Gen.exe <project-name> <framework-name>
 ```
 
-Currently, the tools supports 4 frameworks
+The tool currently supports 4 frameworks:
 - React
-- Angular (Default CLI)
+- Angular
 - Vue
 - Svelte
 

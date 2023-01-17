@@ -24,7 +24,7 @@ void generate(char framework[10], char project_name[255])
       react(project_name);
       break;
     case 2:
-      printf("Creating a %s project\n", framework);
+      printf("Creating an %s project\n", framework);
       angular(project_name);
       break;
     case 3:
