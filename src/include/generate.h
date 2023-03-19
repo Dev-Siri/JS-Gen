@@ -1,9 +1,16 @@
+#ifndef GENERATE_H
 #define GENERATE_H
-#include "react.h"
-#include "angular.h"
-#include "vue.h"
-#include "svelte.h"
+#define PROJECT_NAME_LIMIT 30
 
-void generate(char framework[10], char project_name[255]);
+typedef enum
+{
+  REACT,
+  ANGULAR,
+  VUE,
+  SVELTE,
+} Framework;
 
-int str_to_int(char framework[10]);
+void generate(char framework[10], char project_name[PROJECT_NAME_LIMIT]);
+
+int str_to_framework(char framework[10]);
+#endif

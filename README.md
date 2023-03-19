@@ -1,32 +1,30 @@
 # JS-Gen
 
-Short for JavaScript Generator, is a tool for generating JavaScript projects *fast*.
+JS-Gen (or jen) is a tool for generating JavaScript projects *fast*. <br />
+Reason: `C`
 
 ## Getting Started
-First, clone the repository:
+
+Clone it.
 ```sh
 git clone https://github.com/Dev-Siri/JS-Gen.git
 ```
-Then after opening the project, compile the code.
+
+Compile it.
 ```sh
 make
-# Additionally, You can clean the object files
-make clean
 ```
 ### Usage
 
-Run the binary with
+Use it.
 ```sh
-cd bin
-# Change the executable extension depending on your OS
-# Default is .exe
-./JS-Gen.*
+bin/jen
 ```
 
 Command line arguments:
 
 ```sh
-./JS-Gen.exe <project-name> <framework-name>
+./jen <project-name> <framework-name>
 ```
 
 The tool currently supports 4 frameworks:
@@ -37,12 +35,12 @@ The tool currently supports 4 frameworks:
 
 Examples:
 ```sh
-./JS-Gen.exe react-app react
-./JS-Gen.exe angular-app angular
-./JS-Gen.exe vue-app vue
-./JS-Gen.exe svelte-app svelte
+./jen react-app react
+./jen angular-app angular
+./jen vue-app vue
+./jen svelte-app svelte
 ```
 
 ## License
 
-MIT Licensed, see <a href="LICENSE.md">LICENSE.md</a>
+MIT Licensed, see [LICENSE.md](LICENSE.md)
